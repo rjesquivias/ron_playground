@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     res.send('Health Check OK!')
   })
 
-app.use('/internal', graphqlHTTP({
+app.use('/graphql', graphqlHTTP({
     schema: schema,
     rootValue: root,
     graphiql: true,
