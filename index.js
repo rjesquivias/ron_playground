@@ -19,6 +19,11 @@ var root = {
 };
 
 var app = express();
+
+app.get('/', (req, res) => {
+    res.send('Health Check OK!')
+  })
+
 app.use('/internal', graphqlHTTP({
     schema: schema,
     rootValue: root,
